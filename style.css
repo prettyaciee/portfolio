@@ -703,14 +703,16 @@ img { display: block; max-width: 100%; }
    ===================================================== */
 .edu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.35fr 1fr;
   gap: 1.5rem;
+  align-items: stretch;
 }
 .edu-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 2rem;
+  min-height: 100%;
   transition: border-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
 }
 .edu-card:hover {
@@ -758,6 +760,16 @@ img { display: block; max-width: 100%; }
 
 .edu-achievement { border-color: rgba(255,255,255,0.18); }
 .edu-achievement:hover { border-color: rgba(255,255,255,0.4); }
+
+.edu-main {
+  background: linear-gradient(170deg, rgba(255,255,255,0.04), rgba(255,255,255,0)) , var(--surface);
+}
+
+.edu-courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .course-tags {
   display: flex;
